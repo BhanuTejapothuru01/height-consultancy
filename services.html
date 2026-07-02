@@ -1,0 +1,464 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Height Consultant - Facade Excellence</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#cee5ff",
+                    "primary-fixed": "#ffddb8",
+                    "outline": "#817569",
+                    "on-tertiary-fixed-variant": "#2b4964",
+                    "surface-tint": "#7a582d",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad4",
+                    "on-tertiary-container": "#0c2f48",
+                    "primary-container": "#b58d5d",
+                    "surface-container": "#f0eee8",
+                    "error-container": "#ffdad6",
+                    "secondary": "#645d58",
+                    "inverse-on-surface": "#f3f0ea",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#ebbf8b",
+                    "primary": "#7a582d",
+                    "secondary-container": "#e8ded7",
+                    "primary-fixed-dim": "#ebbf8b",
+                    "surface-variant": "#e5e2dc",
+                    "on-primary-container": "#422701",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f6f3ed",
+                    "on-secondary-fixed-variant": "#4c4641",
+                    "on-background": "#1c1c18",
+                    "on-surface": "#1c1c18",
+                    "on-secondary-fixed": "#1f1b17",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e5e2dc",
+                    "on-surface-variant": "#4f453b",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#5f4118",
+                    "inverse-surface": "#31312d",
+                    "on-tertiary-fixed": "#001d32",
+                    "tertiary-container": "#7997b5",
+                    "secondary-fixed-dim": "#cec5be",
+                    "tertiary-fixed-dim": "#abcaea",
+                    "tertiary": "#43617d",
+                    "surface": "#fcf9f3",
+                    "background": "#fcf9f3",
+                    "surface-container-high": "#ebe8e2",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#d3c4b6",
+                    "on-secondary-container": "#68615c",
+                    "surface-bright": "#fcf9f3",
+                    "secondary-fixed": "#ebe1da",
+                    "on-primary-fixed": "#2a1700"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "max-width": "1440px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["EB Garamond"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["EB Garamond"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                    "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .grain-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(252,249,243,0) 0%, rgba(252,249,243,1) 90%);
+        }
+        .text-justified { text-align: justify; }
+        .mask-image-top { mask-image: linear-gradient(to bottom, black 50%, transparent 100%); }
+        .animate-fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<div class="grain-overlay fixed inset-0 z-[100]"></div>
+<!-- Navigation Shell (TopAppBar) -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-500">
+  <nav class="flex justify-between items-center px-margin-desktop py-8 max-w-max-width mx-auto">
+    <div class="flex items-center gap-4">
+      <span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+      <span class="font-headline-md text-headline-md tracking-widest text-on-surface uppercase">HEIGHT</span>
+    </div>
+    <div class="hidden md:flex items-center gap-12 font-label-md text-label-md uppercase tracking-widest">
+      <a id="nav-home" class="text-secondary hover:text-primary transition-colors" href="index.html">Home</a>
+      <a id="nav-about" class="text-secondary hover:text-primary transition-colors" href="about.html">About</a>
+      <a id="nav-services" class="text-primary border-b border-primary pb-1 transition-colors" href="services.html">Services</a>
+      <a id="nav-projects" class="text-secondary hover:text-primary transition-colors" href="projects.html">Projects</a>
+      <a id="nav-insights" class="text-secondary hover:text-primary transition-colors" href="insights.html">Insights</a>
+      <a id="nav-contact" class="text-secondary hover:text-primary transition-colors" href="contact.html">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:inline-block bg-primary text-on-primary px-8 py-3 font-label-md tracking-widest hover:bg-primary/90 transition-all duration-300 active:opacity-80 text-center">
+        CONSULT
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden text-primary p-2 focus:outline-none">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-drawer" class="hidden fixed inset-0 z-40 bg-surface flex flex-col justify-center items-center gap-8 font-label-md text-label-md uppercase tracking-widest transition-all duration-300">
+    <button id="mobile-menu-close-btn" class="absolute top-8 right-8 text-primary p-2">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <a id="mob-nav-home" class="text-secondary hover:text-primary text-xl transition-colors" href="index.html">Home</a>
+    <a id="mob-nav-about" class="text-secondary hover:text-primary text-xl transition-colors" href="about.html">About</a>
+    <a id="mob-nav-services" class="text-secondary hover:text-primary text-xl transition-colors" href="services.html">Services</a>
+    <a id="mob-nav-projects" class="text-secondary hover:text-primary text-xl transition-colors" href="projects.html">Projects</a>
+    <a id="mob-nav-insights" class="text-secondary hover:text-primary text-xl transition-colors" href="insights.html">Insights</a>
+    <a id="mob-nav-contact" class="text-secondary hover:text-primary text-xl transition-colors" href="contact.html">Contact</a>
+    <a href="contact.html" class="bg-primary text-on-primary px-8 py-3 font-label-md tracking-widest hover:bg-primary/90 transition-all duration-300 active:opacity-80 mt-4 text-center">
+      CONSULT
+    </a>
+  </div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-margin-mobile overflow-hidden">
+<div class="absolute inset-0 -z-10 bg-surface-container-low transition-all duration-[1200ms] ease-out opacity-100 translate-y-0">
+<div class="w-full h-full object-cover opacity-30 mix-blend-multiply grayscale-[0.5]" data-alt="A cinematic, high-angle architectural shot of a modern glass skyscraper reflecting a soft sand-colored sunset." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqZZ3JML9q6oCAIdufj6eOjeAYIMZiDVkfGHZL2gLWb45hqvuTKRwqXB_NDxsH0X-tfZVyn8HXE-C3ch4m7WvE_zdINW0AyFJGtBzCYwebSiS8nHl2cawQ4-3b2VgUuOQEbA6GIgaD0yUUuLgAebs0Pcsrx_3d9VcSGSs8WPUdPi7KMsDbi_olJiWx7fVANBnI3jjxuqXB5uD4pR1dAL2yUsFinUnctwbAzx7nb4wvIF5tNVr_RHTTPeDW9yNZDP13mtGSN2AxEo94')"></div>
+<div class="hero-gradient absolute inset-0"></div>
+</div>
+<div class="max-w-5xl space-y-12 animate-fade-in transition-all duration-[1200ms] ease-out opacity-100 translate-y-0">
+<span class="font-label-md text-label-md uppercase tracking-[0.4em] text-primary block">Architectural Excellence</span>
+<h1 class="font-display-lg text-[56px] md:text-display-lg text-primary leading-tight">The Art of the Envelope</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant max-w-3xl mx-auto italic mb-8">
+                Comprehensive Facade Solutions from Concept to Maintenance
+            </p>
+<div class="pt-16 flex justify-center">
+<div class="w-px h-32 bg-primary/30"></div>
+</div>
+</div>
+</section>
+<!-- Intro Section: Integrated Team -->
+<section class="py-48 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center transition-all duration-[1200ms] ease-out opacity-100 translate-y-0">
+<div class="lg:col-span-5 space-y-10">
+<h2 class="font-headline-lg text-headline-lg text-primary">A Unified Force of Engineering and Craft</h2>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                    Height Consultant delivers complete facade packages through one integrated ecosystem. By aligning our internal engineers, advanced fabrication facilities, and specialist installation crews, we eliminate the friction of traditional sub-contracting.
+                </p>
+<div class="space-y-6 pt-10 border-t border-outline-variant">
+<div class="flex items-center gap-5">
+<span class="material-symbols-outlined text-primary text-3xl">groups</span>
+<span class="font-body-md text-body-md uppercase tracking-wider font-medium">In-house Expert Engineers</span>
+</div>
+<div class="flex items-center gap-5">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+<span class="font-body-md text-body-md uppercase tracking-wider font-medium">Proprietary Fabrication Units</span>
+</div>
+<div class="flex items-center gap-5">
+<span class="material-symbols-outlined text-primary text-3xl">construction</span>
+<span class="font-body-md text-body-md uppercase tracking-wider font-medium">Specialist Installation Teams</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 relative h-[700px] bg-surface-container overflow-hidden shadow-2xl">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 hover:scale-105" data-alt="A high-contrast black and white architectural detail of a terracotta facade system." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuBfe9aIs9Tv1ZTBfrrtYz3kKsRD65qpPqoRXroxF2sv1zoQa4jglP_c9Gl2X9mwpew5_qxEXyEWa0bEOuqkqE4fyaE0t5ZIuEcsuXLpd8-sTApozKek9LlJXgSMVSGCb-rysiesdFSFYznvF7Tp6GWZ6ReA-aLoN7OPbWMAoe7ncGKTFHDgWa0ZXqiPepbjcToeoOD2rwbR2ep8ly7rRAGoY-w04P4WlxyDqn1PWP2qx9OntmjEz7ALpuD0gLkmoFthPp9KRti3jM')"></div>
+<div class="absolute bottom-10 right-10 bg-surface/95 backdrop-blur-md p-10 max-w-sm border border-outline-variant">
+<p class="font-label-md text-label-md text-primary mb-4 tracking-widest">01 INTEGRATION</p>
+<p class="font-body-lg text-body-lg italic text-on-surface">"Every component is designed to exist in perfect harmony with the structure's soul."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Scope & Lifecycle (Bento Style) -->
+<section class="py-48 bg-surface-container-low border-y border-outline-variant/30">
+<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto transition-all duration-[1200ms] ease-out opacity-100 translate-y-0">
+<div class="mb-24">
+<span class="font-label-md text-label-md uppercase tracking-[0.3em] text-secondary block mb-6">The Methodology</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Full Lifecycle of Facade Engineering</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Structural Calculations -->
+<div class="bg-surface p-12 border border-outline-variant transition-all hover:bg-surface-container hover:-translate-y-2 group h-full">
+<span class="font-display-lg text-[64px] text-primary/10 block mb-8 transition-colors group-hover:text-primary/20">01</span>
+<h3 class="font-headline-md text-headline-md uppercase tracking-tight text-primary mb-6">Structural<br>Calculations</h3>
+<p class="font-body-lg text-body-lg text-secondary">Advanced wind load and seismic analysis for absolute safety.</p>
+</div>
+<!-- Shop Drawings -->
+<div class="bg-surface p-12 border border-outline-variant transition-all hover:bg-surface-container hover:-translate-y-2 group h-full">
+<span class="font-display-lg text-[64px] text-primary/10 block mb-8 transition-colors group-hover:text-primary/20">02</span>
+<h3 class="font-headline-md text-headline-md uppercase tracking-tight text-primary mb-6">Shop<br>Drawings</h3>
+<p class="font-body-lg text-body-lg text-secondary">BIM-integrated technical blueprints for precise execution.</p>
+</div>
+<!-- Fabrication -->
+<div class="bg-surface p-12 border border-outline-variant transition-all hover:bg-surface-container hover:-translate-y-2 group h-full">
+<span class="font-display-lg text-[64px] text-primary/10 block mb-8 transition-colors group-hover:text-primary/20">03</span>
+<h3 class="font-headline-md text-headline-md uppercase tracking-tight text-primary mb-6">Material<br>Fabrication</h3>
+<p class="font-body-lg text-body-lg text-secondary">Bespoke manufacturing of glazing and cladding components.</p>
+</div>
+<!-- Installation -->
+<div class="bg-surface p-12 border border-outline-variant transition-all hover:bg-surface-container hover:-translate-y-2 group h-full">
+<span class="font-display-lg text-[64px] text-primary/10 block mb-8 transition-colors group-hover:text-primary/20">04</span>
+<h3 class="font-headline-md text-headline-md uppercase tracking-tight text-primary mb-6">Specialist<br>Installation</h3>
+<p class="font-body-lg text-body-lg text-secondary">Expert crews delivering millimetric precision on-site.</p>
+</div>
+<!-- Testing -->
+<div class="bg-surface p-12 border border-outline-variant transition-all hover:bg-surface-container hover:-translate-y-2 group h-full">
+<span class="font-display-lg text-[64px] text-primary/10 block mb-8 transition-colors group-hover:text-primary/20">05</span>
+<h3 class="font-headline-md text-headline-md uppercase tracking-tight text-primary mb-6">Performance<br>Testing</h3>
+<p class="font-body-lg text-body-lg text-secondary">Rigorous water, air, and acoustic insulation validation.</p>
+</div>
+<!-- Handover -->
+<div class="bg-surface p-12 border border-outline-variant transition-all hover:bg-surface-container hover:-translate-y-2 group h-full">
+<span class="font-display-lg text-[64px] text-primary/10 block mb-8 transition-colors group-hover:text-primary/20">06</span>
+<h3 class="font-headline-md text-headline-md uppercase tracking-tight text-primary mb-6">Handover &amp;<br>Maintenance</h3>
+<p class="font-body-lg text-body-lg text-secondary">Ensuring longevity with comprehensive care packages.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Services: Editorial Layout -->
+<section class="py-48 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="flex flex-col gap-40 transition-all duration-[1200ms] ease-out opacity-100 translate-y-0 space-y-12">
+<!-- Service 01 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 group">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="aspect-[16/10] bg-surface-container-high overflow-hidden border border-outline-variant">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A detailed view of a high-end unitized curtain wall installation in progress." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLT66qQjbPIbX33iefEYtBxrcSXu5dzs3m0EqqjgqwuZbXvx89-5ZiyE5GEUmJ63xqeZBRtnBF4ordu8rKvkh7Rz_0KWzOzULMbZcqrpgl2EJgs998ydkC628XRumc8VIfdSLWpdCFu8-XMrklyOHw-ezgJ5rl3q9wlrbquDxNKWZeKJrKGQze8m1HdfbpeD3cbKsPoeCXQoKP-7XLaeY3OK5aVENqBF9vS09yEox7FEFYwFE8WvSb3nN9pl0L5mEHcTAFeqCy1IRh')"></div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center space-y-8 order-1 lg:order-2">
+<span class="font-label-md text-label-md text-primary tracking-[0.3em] font-bold">01 / CURTAIN WALL SYSTEMS</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Curtain Wall Installation</h3>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">Specializing in unitized and stick systems, we transform structural skeletons into iconic silhouettes through advanced glass engineering and thermal efficiency.</p>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 group">
+<div class="lg:col-span-5 flex flex-col justify-center space-y-8">
+<span class="font-label-md text-label-md text-primary tracking-[0.3em] font-bold">02 / MATERIALITY</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Terracotta &amp; Metal Cladding</h3>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">Bringing warmth and permanence through natural terracotta and the precision of architectural metals. Our cladding solutions focus on rainscreen performance and aesthetic continuity.</p>
+</div>
+<div class="lg:col-span-7">
+<div class="aspect-[16/10] bg-surface-container-high overflow-hidden border border-outline-variant">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A close-up photograph of custom bronze-finished metal cladding panels." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5hMejj_cI3P86PH-Wgu3pHU4SfZT0rnPdQwrqu4wrVqoYoiuZMlZXAWYYCTweND3NeGnZa2bPUo8bD2-Pe_-lZFsr2V-dQozHBA__gUdVQ-lfHcG1LAWEJSbu60J7gt3Ivg-P968YlemWV-YGzXS-irRqeA5uzjd3LQg6IvWrRyxKvz8akQapRomgLhdnqN0F-rDktDGQ7vsi0iJp3TULuZUonjflCI1Y2jSQDzNRRMNKzEDoA1AUw5g1srryVdbWDkTLCV9XA38t')"></div>
+</div>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 group">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="aspect-[16/10] bg-surface-container-high overflow-hidden border border-outline-variant">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A professional engineering workspace showing complex facade design blueprints." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBI9DlwVGdvGDQu7QS3pwjpZYGGYvZBXHzYqfPPVVRuxW7gewBRU8V8Plo8hwLkpbTM8wVwgEf0tyUchBwn3uMQOSSSNpH5tp09v3zw7n47yzJi2SVVw9GFgXLLcpj_SmgUIYMzTDNUTBDYdkPju0JGs25t7miSlYNut_XYWwIRnNKEYRL9u8RybyyKYoP9xDaTec7OjbtAXVt7y6qFZNfdUMpZcNwFGCHPwiiLwicJ5ow_T9ol1RPnnf7WqamElN3yy-i-WmKjOgpf')"></div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center space-y-8 order-1 lg:order-2">
+<span class="font-label-md text-label-md text-primary tracking-[0.3em] font-bold">03 / TECHNICAL RIGOR</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Facade Engineering &amp; Design</h3>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">Our engineers solve the most complex geometry and environmental challenges, ensuring your building's skin is as resilient as it is beautiful.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-48 bg-primary text-on-primary">
+<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto transition-all duration-[1200ms] ease-out opacity-100 translate-y-0">
+<div class="text-center max-w-4xl mx-auto space-y-12">
+<span class="font-label-md text-label-md uppercase tracking-[0.5em] opacity-80">Core Philosophy</span>
+<h2 class="font-headline-lg text-[48px] md:text-display-lg leading-tight">Driven by Performance, Sustained by Longevity</h2>
+<p class="font-body-lg text-body-lg opacity-90 leading-loose max-w-3xl mx-auto">
+                    We do not merely build facades; we craft enduring protection. Our philosophy prioritizes the technical performance of materials against time and the elements, without compromising the architect's pure aesthetic vision.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-20 mt-32">
+<div class="space-y-6 text-center">
+<h4 class="font-headline-md text-headline-md">Performance</h4>
+<p class="font-body-lg text-body-lg opacity-80 leading-relaxed">Achieving extreme thermal and acoustic values for sustainable modern living.</p>
+</div>
+<div class="space-y-6 text-center">
+<h4 class="font-headline-md text-headline-md">Longevity</h4>
+<p class="font-body-lg text-body-lg opacity-80 leading-relaxed">Sourcing materials and engineering joints that defy the decay of decades.</p>
+</div>
+<div class="space-y-6 text-center">
+<h4 class="font-headline-md text-headline-md">Aesthetics</h4>
+<p class="font-body-lg text-body-lg opacity-80 leading-relaxed">Hidden fixings and seamless transitions that honor architectural purity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-56 relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest -z-10 transition-all duration-[1200ms] ease-out opacity-100 translate-y-0 flex flex-col items-center">
+<div class="w-full h-full opacity-10" data-alt="A soft-focus, minimalist background of architectural sand-colored stone." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLPJrMz3jbEiHCqwbQaemg5J7s1hMcW7G9lAPCkulzvTQac5tYTpG84JQCkl_eYDlepSFyCg7m3BVRvj64pkOckUwTyBBPjcEMcArox3yEhbL-nH-F93258XehZ9uK2SHMgzc4ncBb2r7r2mMjiPyaZfTNpk9gid07Y8PfS-W9lAcp3mmjFdqeYU7DWFi48Tnhbwxwy9jK13LrbxD2U55eTC2fh-MJwohrWj5NtKlQ_OaijDZbRbF5Lo234NaLnjFRB5Osb_ACNMOS')"></div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto text-center space-y-16 transition-all duration-[1200ms] ease-out opacity-100 translate-y-0 flex flex-col items-center">
+<h2 class="font-headline-lg text-headline-lg text-primary max-w-3xl mx-auto leading-tight">Ready to discuss your facade package?</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">Let our integrated team provide a feasibility study for your next landmark project.</p>
+<div class="flex flex-col md:flex-row justify-center gap-8 pt-8">
+<button class="bg-primary text-on-primary px-14 py-6 font-label-md text-label-md uppercase tracking-[0.2em] hover:bg-on-primary-container transition-all shadow-lg hover:shadow-xl">
+                    Request Consultation
+                </button>
+<button class="border border-primary text-primary px-14 py-6 font-label-md text-label-md uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all">
+                    Download Capabilities
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter px-margin-desktop py-24 max-w-max-width mx-auto">
+    <div class="space-y-8">
+      <div class="flex items-center gap-4">
+        <span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+        <span class="font-headline-md text-headline-md tracking-widest text-on-surface uppercase">HEIGHT</span>
+      </div>
+      <p class="font-body-md text-on-surface-variant max-w-xs uppercase text-xs tracking-widest leading-loose">
+        Global Architectural Consultancy specializing in structural integrity, vertical luxury, and sustainable engineering for the world's most iconic skylines.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest">Studios</h4>
+        <ul class="space-y-4 font-label-md text-[12px] text-on-secondary-fixed-variant tracking-widest list-none uppercase font-semibold">
+          <li><a class="hover:text-primary transition-colors" href="#">London Studio</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Milan Studio</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">New York Studio</a></li>
+        </ul>
+      </div>
+      <div class="space-y-6">
+        <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest">Connect</h4>
+        <ul class="space-y-4 font-label-md text-[12px] text-on-secondary-fixed-variant tracking-widest list-none uppercase font-semibold">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-primary transition-colors" href="projects.html">Projects</a></li>
+          <li><a class="hover:text-primary transition-colors" href="insights.html">Insights</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="space-y-8">
+      <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest">Intellectual Journal</h4>
+      <div class="relative">
+        <input class="w-full bg-transparent border-b border-outline py-4 font-label-md text-[12px] uppercase focus:border-primary outline-none transition-colors" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+        <button class="absolute right-0 bottom-4 font-label-md text-primary uppercase tracking-widest text-xs">Join</button>
+      </div>
+    </div>
+  </div>
+  <div class="px-margin-desktop py-12 border-t border-outline-variant/30 text-center max-w-max-width mx-auto">
+    <p class="font-label-md text-[10px] text-on-secondary-fixed-variant uppercase tracking-[0.3em]">
+      © 2026 HEIGHT ARCHITECTURAL CONSULTANCY. ALL RIGHTS RESERVED.
+    </p>
+  </div>
+</footer>
+<script>
+    // Intersection Observer for expansive reveals
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-12');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+        el.classList.add('transition-all', 'duration-[1200ms]', 'ease-out', 'opacity-0', 'translate-y-12');
+        observer.observe(el);
+    });
+
+    // Sticky Nav shadow
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+            header.classList.add('shadow-xl', 'bg-surface/80');
+        } else {
+            header.classList.remove('shadow-xl', 'bg-surface/60');
+        }
+    });
+</script>
+
+
+
+<script>
+// Mobile menu toggle logic
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuCloseBtn = document.getElementById('mobile-menu-close-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+
+    if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileDrawer.classList.remove('hidden');
+        });
+    }
+    if (mobileMenuCloseBtn && mobileDrawer) {
+        mobileMenuCloseBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileDrawer.classList.add('hidden');
+        });
+    }
+    // Close mobile drawer on link clicks
+    if (mobileDrawer) {
+        mobileDrawer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.add('hidden');
+            });
+        });
+    }
+});
+</script>
+</body></html>
