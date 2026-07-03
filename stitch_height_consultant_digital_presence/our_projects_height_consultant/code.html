@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | Height Consultant - Structural Landmarks</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-kern-tight { letter-spacing: -0.02em; }
+        .text-kern-wide { letter-spacing: 0.1em; }
+        
+        /* Custom scrollbar to match architectural aesthetic */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #fcf9f3; }
+        ::-webkit-scrollbar-thumb { background: #d3c4b6; }
+        
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 48px; /* Increased from 24px */
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 48px; /* Increased from 24px */
+        }
+
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 99;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#cee5ff",
+                      "primary-fixed": "#ffddb8",
+                      "outline": "#817569",
+                      "on-tertiary-fixed-variant": "#2b4964",
+                      "surface-tint": "#7a582d",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#dcdad4",
+                      "on-tertiary-container": "#0c2f48",
+                      "primary-container": "#b58d5d",
+                      "surface-container": "#f0eee8",
+                      "error-container": "#ffdad6",
+                      "secondary": "#645d58",
+                      "inverse-on-surface": "#f3f0ea",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#ebbf8b",
+                      "primary": "#7a582d",
+                      "secondary-container": "#e8ded7",
+                      "primary-fixed-dim": "#ebbf8b",
+                      "surface-variant": "#e5e2dc",
+                      "on-primary-container": "#422701",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#f6f3ed",
+                      "on-secondary-fixed-variant": "#4c4641",
+                      "on-background": "#1c1c18",
+                      "on-surface": "#1c1c18",
+                      "on-secondary-fixed": "#1f1b17",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e5e2dc",
+                      "on-surface-variant": "#4f453b",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#5f4118",
+                      "inverse-surface": "#31312d",
+                      "on-tertiary-fixed": "#001d32",
+                      "tertiary-container": "#7997b5",
+                      "secondary-fixed-dim": "#cec5be",
+                      "tertiary-fixed-dim": "#abcaea",
+                      "tertiary": "#43617d",
+                      "surface": "#fcf9f3",
+                      "background": "#fcf9f3",
+                      "surface-container-high": "#ebe8e2",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#d3c4b6",
+                      "on-secondary-container": "#68615c",
+                      "surface-bright": "#fcf9f3",
+                      "secondary-fixed": "#ebe1da",
+                      "on-primary-fixed": "#2a1700"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "unit": "10px",
+                      "margin-mobile": "24px",
+                      "max-width": "1600px",
+                      "gutter": "32px"
+              },
+              "fontFamily": {
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-md": ["EB Garamond"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-lg": ["EB Garamond"],
+                      "display-lg": ["EB Garamond"],
+                      "label-md": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["EB Garamond"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "headline-md": ["34px", {"lineHeight": "42px", "fontWeight": "500"}],
+                      "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "headline-lg": ["52px", {"lineHeight": "60px", "fontWeight": "400"}],
+                      "display-lg": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.03em", "fontWeight": "400"}],
+                      "label-md": ["15px", {"lineHeight": "22px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        @media (max-width: 768px) {
+            .font-display-lg { font-size: 56px; line-height: 64px; }
+        }
+/* Mobile Menu Styles */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fcf9f3;
+    z-index: 49;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-top: 8rem;
+    box-sizing: border-box;
+}
+#mobile-menu.translate-x-full {
+    transform: translateX(100%);
+}
+#mobile-menu.translate-x-0 {
+    transform: translateX(0);
+}
+.mobile-nav-link {
+    color: #4f453b;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.mobile-nav-link:hover {
+    color: #7a582d;
+}
+.mobile-consult-btn {
+    width: 100%;
+    background-color: #7a582d;
+    color: #fff;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.mobile-consult-btn:hover {
+    background-color: #5f4118;
+}
+body.menu-open {
+    overflow: hidden;
+}
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<div class="grain-overlay"></div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer text-3xl md:hidden z-50" id="mobile-menu-btn">menu</span>
+<a class="font-headline-md text-headline-md tracking-tighter text-primary" href="#">HEIGHT</a>
+</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md uppercase text-[13px]" href="../home_height_consultant/code.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md uppercase text-[13px]" href="../about_us_height_consultant/code.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md uppercase text-[13px]" href="../our_services_height_consultant/code.html">Services</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md uppercase text-[13px]" href="../our_projects_height_consultant/code.html">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md uppercase text-[13px]" href="../insights_height_consultant/code.html">Insights</a>
+</div>
+<button class="bg-primary text-on-primary px-10 py-4 font-label-md hover:bg-primary/90 transition-all uppercase tracking-widest">
+            CONSULT
+        </button>
+</div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="translate-x-full md:hidden">
+    <nav style="display: flex; flex-direction: column; gap: 2rem;">
+        <a class="mobile-nav-link" href="../home_height_consultant/code.html">Home</a>
+        <a class="mobile-nav-link" href="../about_us_height_consultant/code.html">About</a>
+        <a class="mobile-nav-link" href="../our_services_height_consultant/code.html">Services</a>
+        <a class="mobile-nav-link" href="../our_projects_height_consultant/code.html">Projects</a>
+        <a class="mobile-nav-link" href="../insights_height_consultant/code.html">Insights</a>
+        <a class="mobile-nav-link" href="../contact_us_height_consultant/code.html">Contact</a>
+    </nav>
+    <div>
+        <button class="mobile-consult-btn">CONSULT</button>
+    </div>
+</div>
+<main class="pt-48 md:pt-60">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-32 md:mb-48">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-12 border-b border-outline-variant pb-20">
+<div class="max-w-4xl">
+<span class="font-label-md text-primary uppercase tracking-[0.3em] block mb-6">Portfolio</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-10 leading-tight">India’s Structural <br class="hidden md:block"/> Landmarks</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">200+ Facade Packages Delivered Across India. Designed, fabricated, and installed by Height Consultant with architectural precision and engineering excellence.</p>
+</div>
+<div class="flex gap-6 items-center">
+<div class="w-16 h-[1px] bg-outline-variant hidden md:block"></div>
+<p class="font-body-md italic text-primary text-lg">EST. 1998 — RAJASTHAN</p>
+</div>
+</div>
+</section>
+<!-- Category Filter -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-20">
+<div class="flex flex-wrap gap-6 items-center">
+<span class="font-label-md text-on-surface-variant mr-6 uppercase">Filter by:</span>
+<button class="px-8 py-3 border border-primary bg-primary text-on-primary font-label-md transition-all uppercase">All Works</button>
+<button class="px-8 py-3 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-md transition-all uppercase">Residential</button>
+<button class="px-8 py-3 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-md transition-all uppercase">Commercial</button>
+<button class="px-8 py-3 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-md transition-all uppercase">Renovation &amp; Restoration</button>
+</div>
+</section>
+<!-- Projects Masonry Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-48">
+<div class="masonry-grid">
+<!-- Project 1: Hero Moto Corp -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container mb-8">
+<img alt="Commercial facade of Hero Moto Corp" class="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRdBXbdIAtvp66tfrT7PihVtspOGjrp2EAQOBXfq5idnFRhQJ5Nl4ItIE3-I_A1M3XNdds9NwFcg5dWvNkZoJBn9KUNMsuXmeosWnERK_zAm09brbRrgg2FTPMwA3_m1RQa2as__mQrprqP8bdC_HLrjQXkXF5FKxRwi3mHKQmS08dUWuG28UGs5kdyGUW1rAwBPQUgqCRTF4B1mxFeDwIi6EezSF8Li4bLcdh8bzpc8BpI2LKysTOG-ERRbvFrEOIfFPv2eeROrZB"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Hero Moto Corp</h3>
+<p class="font-label-md text-primary uppercase tracking-widest">Commercial / Industrial Facade</p>
+</div>
+<!-- Project 2: Asian Paints -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container mb-8">
+<img alt="Asian Paints corporate building" class="w-full h-[400px] object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAppWPDUZcDcT8gsSxJRXMq7fsuyNKvGddyXrl03ig-A-Uyg8o8AojPDuB_Exmu-fth2-crj_aIkP3CERoAo7zaPIJgv6lbTW6xxXgkESoIM87W8dPY83yovSXE18FNWmPWPv1mt5VmwrZnbXK_1xcqzKsbHaZ4MN-3tGg-TVe2w89RDTNQc7JEdrlAnSZvZ7EU8Pk5zNccbd4tOwAs2lrbWRnvaDpknw8OjVaYSmsOw84-sYlFEJ3jjKyIZy9TdoOGVpHAz1pD711P"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Asian Paints</h3>
+<p class="font-label-md text-primary uppercase tracking-widest">Commercial / Corporate</p>
+</div>
+<!-- Project 3: Chokhi Dhani -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container mb-8">
+<img alt="Chokhi Dhani resort architecture" class="w-full h-[520px] object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9aze5kUsGdWmfM-RtWenRBOicJBfcZsIUyc3sqQW3YXXsXI3T9GeGCND9JYw4HR8TOH6L2ulwMmnj5cATBPIvubgXwFZp2YHKMGVPBezQJuUt33mBBshZHEb0SAD0nw4UeVxN9JbRxGkEEyNiZXB7mvlwo5BO3n5J0N4jSoEEMCiMv0ysld88XjiGWGc6yRYCk1s50Cys5jLZ9yZRG64zX3vvlbJBhYikrVlTNzHQbwexng2A93BUAz81ZGxyinHoaThT8uY7GrWZ"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Chokhi Dhani</h3>
+<p class="font-label-md text-primary uppercase tracking-widest">Renovation &amp; Restoration</p>
+</div>
+<!-- Project 4: Jaipur Metro Depot -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container mb-8">
+<img alt="Jaipur Metro Depot" class="w-full h-[450px] object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIv4TcSshcjGJQP7jQM6Wss3MOcJ8zhFj9kt3AACQnEqRyHWiwefV7RpAmkoYcgOlZTFbZ4lsluAqs2zexeXt7b3xHBitKu_1pgeR2LVlr9V3AEkzZa7f52uHIyLM1WM4j_CchGSFJc9vpdrDNdl2t7kBZNiZa8koVnS4aBdTvX9oGJRImV8YRpZUfQmpAwV_gVg-EaGODjEUIOv8GHeyHlyyL69GJ9qA8xuwb2cjfbEUMCb9Ng3JztO9Y29kJwt8KVI8gw5nmTiHB"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Jaipur Metro Depot</h3>
+<p class="font-label-md text-primary uppercase tracking-widest">Commercial / Infrastructure</p>
+</div>
+<!-- Project 5: Bhamashah State Data Centre -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container mb-8">
+<img alt="Bhamashah Data Centre" class="w-full h-[650px] object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGB1358DuGAhjFsRr2Zo4qAkSayNqFIIcO_itHU_qnIR3lHVng3vnAweKc3zJcIsa976nkRhSz-tYshWkb438LF8eOzKNW7ATlBBhpEpCMRdTJlFJOwye8O2GrufijScf7RRDhPaROJI-Q_8P8y2FKRXsII_7OYrd8hI0pBNu9vlKiyR8QuUXUQVynpcnJ4oQDdt0rvapH45_WD4Lck98dIDPP5CdhLtLyGEtOF9_-hzCEy45x3dxamqclbbAEpND0y41AMMIv-vqo"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bhamashah Data Centre</h3>
+<p class="font-label-md text-primary uppercase tracking-widest">Commercial / Technology</p>
+</div>
+<!-- Project 6: Bella Casa -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container mb-8">
+<img alt="Bella Casa residential luxury" class="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf45jieuw19K7jvAEPi4lH248MpJE-TEDGjylXjRS5v_2Qj0mEoRw9UAvDIttODGHC1PkMSlpWykD-G1MHt7imPNaJGlNvzPHK7POi8f8p84oT5YElr93E649lXKbQJNGhX_I7ALja6oTgxuMr5YvujVQ_GzQe6CLiKNbq0Khwyj07yQlvcbRsPBpj3oXOWYK3FkjuVvGb8iUcf5AXE4bMDGJ2b5rzPo5qC5CUosyOKX-XpA1wGyph75xqXZD4pTj8FC_cI6p1hfzx"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bella Casa</h3>
+<p class="font-label-md text-primary uppercase tracking-widest">Residential / Luxury Living</p>
+</div>
+</div>
+<!-- List of other notable projects -->
+<div class="mt-32 border-t border-outline-variant pt-20">
+<h4 class="font-label-md text-on-surface-variant uppercase tracking-[0.25em] mb-16">Additional Notable Commissions</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-20">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">NBCC Tower</span>
+<span class="font-label-md text-outline uppercase tracking-widest">Delhi</span>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">Ganga Heights</span>
+<span class="font-label-md text-outline uppercase tracking-widest">Jaipur</span>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">Ageis Call Centre</span>
+<span class="font-label-md text-outline uppercase tracking-widest">Noida</span>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">Pink Pearl</span>
+<span class="font-label-md text-outline uppercase tracking-widest">Jaipur</span>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">Glacier</span>
+<span class="font-label-md text-outline uppercase tracking-widest">Commercial</span>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">KTM Showroom</span>
+<span class="font-label-md text-outline uppercase tracking-widest">Multiple</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container py-48 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg mb-12 leading-snug">Interested in seeing how we can bring your project to life?</h2>
+<div class="flex flex-col md:flex-row gap-10 justify-center items-center">
+<button class="bg-primary text-on-primary px-14 py-5 font-label-md hover:bg-primary/90 transition-all uppercase tracking-[0.2em] shadow-lg">Request a Proposal</button>
+<button class="border-2 border-secondary text-secondary px-14 py-5 font-label-md hover:bg-secondary/5 transition-all uppercase tracking-[0.2em]">Download Brochure</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-margin-mobile md:px-margin-desktop py-32 max-w-max-width mx-auto">
+<div class="md:col-span-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-10">HEIGHT</h3>
+<p class="font-body-lg text-on-surface-variant max-w-sm leading-relaxed">Pioneering structural integrity and aesthetic excellence in Indian facade engineering since 1998.</p>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-10 uppercase tracking-[0.25em]">Regional Offices</h4>
+<ul class="space-y-4 font-body-md text-secondary text-lg">
+<li class="hover:text-primary cursor-pointer transition-colors">Jaipur Office</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Delhi Office</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Mumbai Office</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Bangalore Office</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-10 uppercase tracking-[0.25em]">Quick Links</h4>
+<ul class="space-y-4 font-body-md text-secondary text-lg">
+<li class="hover:text-primary cursor-pointer transition-colors">Our Story</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Technical Specs</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Sustainability</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Careers</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-10 uppercase tracking-[0.25em]">Legal</h4>
+<ul class="space-y-4 font-body-md text-secondary text-lg mb-12">
+<li class="hover:text-primary cursor-pointer transition-colors">Privacy Policy</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Terms of Service</li>
+</ul>
+<div class="flex gap-6">
+<a class="w-14 h-14 border-2 border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[24px]">share</span>
+</a>
+<a class="w-14 h-14 border-2 border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-12 border-t border-outline-variant/30 text-center">
+<p class="font-body-md text-on-surface-variant/60 text-base uppercase tracking-widest">© 2024 Height Consultant. Architectural Engineering Excellence.</p>
+</div>
+</footer>
+<script>
+    // Smooth entrance animations for cards
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-20');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.masonry-item').forEach(item => {
+            item.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-20');
+            observer.observe(item);
+        });
+    });
+
+    // Simple parallax for hero
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('h1');
+        if(hero) {
+            hero.style.transform = `translateY(${scrolled * 0.12}px)`;
+        }
+    });
+
+    // Mobile menu toggle functionality
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuBtn ? (menuBtn.querySelector('.material-symbols-outlined') || menuBtn) : null;
+
+    if (menuBtn && mobileMenu && menuIcon) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('translate-x-0');
+            if (isOpen) {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.textContent = 'menu';
+                document.body.classList.remove('menu-open');
+            } else {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                menuIcon.textContent = 'close';
+                document.body.classList.add('menu-open');
+            }
+        });
+
+        // Close menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.textContent = 'menu';
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
+</script>
+</body></html>

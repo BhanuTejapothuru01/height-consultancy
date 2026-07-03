@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Height Consultants</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Hanken+Grotesk:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#cee5ff",
+                      "primary-fixed": "#ffddb8",
+                      "outline": "#817569",
+                      "on-tertiary-fixed-variant": "#2b4964",
+                      "surface-tint": "#7a582d",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#dcdad4",
+                      "on-tertiary-container": "#0c2f48",
+                      "primary-container": "#b58d5d",
+                      "surface-container": "#f0eee8",
+                      "error-container": "#ffdad6",
+                      "secondary": "#645d58",
+                      "inverse-on-surface": "#f3f0ea",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#ebbf8b",
+                      "primary": "#7a582d",
+                      "secondary-container": "#e8ded7",
+                      "primary-fixed-dim": "#ebbf8b",
+                      "surface-variant": "#e5e2dc",
+                      "on-primary-container": "#422701",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#f6f3ed",
+                      "on-secondary-fixed-variant": "#4c4641",
+                      "on-background": "#1c1c18",
+                      "on-surface": "#1c1c18",
+                      "on-secondary-fixed": "#1f1b17",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e5e2dc",
+                      "on-surface-variant": "#4f453b",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#5f4118",
+                      "inverse-surface": "#31312d",
+                      "on-tertiary-fixed": "#001d32",
+                      "tertiary-container": "#7997b5",
+                      "secondary-fixed-dim": "#cec5be",
+                      "tertiary-fixed-dim": "#abcaea",
+                      "tertiary": "#43617d",
+                      "surface": "#fcf9f3",
+                      "background": "#fcf9f3",
+                      "surface-container-high": "#ebe8e2",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#d3c4b6",
+                      "on-secondary-container": "#68615c",
+                      "surface-bright": "#fcf9f3",
+                      "secondary-fixed": "#ebe1da",
+                      "on-primary-fixed": "#2a1700"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "unit": "12px",
+                      "margin-mobile": "24px",
+                      "max-width": "1600px",
+                      "gutter": "32px"
+              },
+              "fontFamily": {
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-md": ["EB Garamond"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-lg": ["EB Garamond"],
+                      "display-lg": ["EB Garamond"],
+                      "label-md": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["EB Garamond"]
+              },
+              "fontSize": {
+                      "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                      "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                      "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "label-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .input-border-bottom {
+            border: none;
+            border-bottom: 1px solid #d3c4b6;
+            background: transparent;
+        }
+        .input-border-bottom:focus {
+            outline: none;
+            border-bottom: 1px solid #7a582d;
+            box-shadow: none;
+        }
+        .sepia-filter {
+            filter: sepia(0.2) contrast(1.1) brightness(0.95);
+        }
+        body {
+          min-height: 100dvh;
+        }
+/* Mobile Menu Styles */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fcf9f3;
+    z-index: 49;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-top: 8rem;
+    box-sizing: border-box;
+}
+#mobile-menu.translate-x-full {
+    transform: translateX(100%);
+}
+#mobile-menu.translate-x-0 {
+    transform: translateX(0);
+}
+.mobile-nav-link {
+    color: #4f453b;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.mobile-nav-link:hover {
+    color: #7a582d;
+}
+.mobile-consult-btn {
+    width: 100%;
+    background-color: #7a582d;
+    color: #fff;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.mobile-consult-btn:hover {
+    background-color: #5f4118;
+}
+body.menu-open {
+    overflow: hidden;
+}
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30">
+<nav class="flex justify-between items-center h-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer text-3xl md:hidden z-50" id="mobile-menu-btn">menu</span>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary">HEIGHT</span>
+</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="../home_height_consultant/code.html">Home</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="../about_us_height_consultant/code.html">About</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="../our_services_height_consultant/code.html">Services</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="../our_projects_height_consultant/code.html">Projects</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="../insights_height_consultant/code.html">Insights</a>
+</div>
+<button class="bg-primary px-10 py-3 text-white font-label-md tracking-widest hover:bg-on-primary-container transition-all">CONSULT</button>
+</nav>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="translate-x-full md:hidden">
+    <nav style="display: flex; flex-direction: column; gap: 2rem;">
+        <a class="mobile-nav-link" href="../home_height_consultant/code.html">Home</a>
+        <a class="mobile-nav-link" href="../about_us_height_consultant/code.html">About</a>
+        <a class="mobile-nav-link" href="../our_services_height_consultant/code.html">Services</a>
+        <a class="mobile-nav-link" href="../our_projects_height_consultant/code.html">Projects</a>
+        <a class="mobile-nav-link" href="../insights_height_consultant/code.html">Insights</a>
+        <a class="mobile-nav-link" href="../contact_us_height_consultant/code.html">Contact</a>
+    </nav>
+    <div>
+        <button class="mobile-consult-btn">CONSULT</button>
+    </div>
+</div>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex flex-col justify-center items-center text-center px-margin-mobile md:px-margin-desktop bg-surface-container-low overflow-hidden py-32">
+<div class="absolute inset-0 grain-texture"></div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-label-md text-primary tracking-[0.4em] uppercase mb-10 animate-fade-in">Get In Touch</p>
+<h1 class="font-display-lg text-display-lg text-primary mb-12 leading-tight">Collaborate on Excellence</h1>
+<div class="w-24 h-px bg-outline-variant mx-auto mb-10"></div>
+</div>
+</section>
+<!-- Contact Split Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-0 border-t border-outline-variant/30">
+<!-- Left: Form -->
+<div class="lg:col-span-7 p-margin-mobile md:p-32 border-r border-outline-variant/30">
+<div class="max-w-2xl mx-auto lg:mx-0">
+<h2 class="font-headline-lg text-headline-lg mb-8 text-on-surface">Initiate Inquiry</h2>
+<p class="font-body-lg text-on-surface-variant mb-20 leading-relaxed">Detail your vision or project requirements. Our engineering team will review your submission with the precision it deserves.</p>
+<form class="space-y-16">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="flex flex-col">
+<label class="font-label-md text-outline uppercase mb-4">Name</label>
+<input class="input-border-bottom py-4 font-body-md" placeholder="Enter full name" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-outline uppercase mb-4">Company</label>
+<input class="input-border-bottom py-4 font-body-md" placeholder="Organization name" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="flex flex-col">
+<label class="font-label-md text-outline uppercase mb-4">Telephone</label>
+<input class="input-border-bottom py-4 font-body-md" placeholder="+91 ..." type="tel"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-outline uppercase mb-4">Email</label>
+<input class="input-border-bottom py-4 font-body-md" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-outline uppercase mb-4">Message</label>
+<textarea class="input-border-bottom py-4 font-body-md resize-none" placeholder="Describe your architectural facade or engineering requirements..." rows="5"></textarea>
+</div>
+<div class="pt-10">
+<button class="bg-primary text-on-primary px-16 py-6 font-label-md tracking-widest flex items-center gap-4 hover:bg-on-primary-container transition-all group" type="submit">
+                                SUBMIT INQUIRY
+                                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Right: Office & Details -->
+<div class="lg:col-span-5 bg-surface-container flex flex-col">
+<!-- Map Placeholder -->
+<div class="h-[500px] relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105" data-alt="A clean, architectural map rendering of Jaipur city, specifically focusing on the Tonk Road area." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdYotaN5syGj52BkuT08ybg9DAKt9MIbtBqGUKEHOIRhL8EPj6c-jFxPpHUS48GPAqSLKJFjdo_ZZnwyD0J4ut0MEM2rw4nIjTSsUrO6epnWX32sXLrEmIco04cIHhk90mgjZsjMOxfIq55GkFjiEARgt1W9oN6o61vqF9UAKE878xxYPrri92Mar1m6OiZ7YhfPxhABjQ-N4Heh3afR_5UugrfFl7K-u15Sgj7LUz0Xp-JfdeQylmH25QDR9B8RiT9fWEImAtDhWP"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="absolute bottom-10 left-10 bg-surface px-8 py-5 border border-outline-variant/30 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<span class="font-label-md text-on-surface uppercase tracking-widest">The Headquarters</span>
+</div>
+</div>
+<div class="p-margin-mobile md:p-24 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-label-md text-primary uppercase tracking-[0.3em] mb-10">Office Address</h3>
+<p class="font-headline-md text-on-surface mb-4">Jaipur Centre</p>
+<p class="font-body-lg text-on-surface-variant leading-relaxed mb-16">
+                            530–531 Jaipur Centre Mall,<br/>
+                            Tonk Road, Jaipur,<br/>
+                            Rajasthan, India
+                        </p>
+</div>
+<div class="mt-auto pt-16 border-t border-outline-variant/30">
+<div class="flex flex-col gap-12">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary mt-2 text-3xl">call</span>
+<div>
+<p class="font-label-md text-outline uppercase mb-2">Direct Line</p>
+<a class="font-headline-md text-on-surface hover:text-primary transition-colors" href="tel:01412720770">0141-2720770</a>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary mt-2 text-3xl">mail</span>
+<div>
+<p class="font-label-md text-outline uppercase mb-2">Electronic Correspondence</p>
+<p class="font-headline-md text-on-surface">info@heightconsultants.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Section -->
+<section class="py-48 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary text-center relative overflow-hidden">
+<div class="absolute inset-0 grain-texture opacity-10"></div>
+<div class="relative z-10 max-w-5xl mx-auto">
+<span class="material-symbols-outlined text-7xl mb-12 opacity-60">architecture</span>
+<h2 class="font-display-lg text-display-lg mb-10">Get a Quote for Your Facade Package</h2>
+<p class="font-body-lg text-white/80 mb-16 max-w-3xl mx-auto leading-relaxed">
+                    To provide the most accurate engineering assessment, please attach project drawings and specifications. Our technical department ensures a response within 48 hours.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-8">
+<button class="bg-white text-primary px-14 py-6 font-label-md tracking-widest hover:bg-surface-container-low transition-all">UPLOAD DRAWINGS</button>
+<button class="border border-white/30 text-on-primary px-14 py-6 font-label-md tracking-widest hover:bg-white/10 transition-all">FACADE CONSULTATION</button>
+</div>
+</div>
+</section>
+<!-- Gallery / Contextual Imagery (Bento style) -->
+<section class="p-margin-mobile md:p-32 bg-surface">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-gutter h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative overflow-hidden group">
+<img class="w-full h-full object-cover sepia-filter group-hover:scale-105 transition-transform duration-1000" data-alt="A sophisticated close-up of a modern skyscraper facade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ3EVWFhqRd81XJ3MOo6rHu0lKHD510ZBkUBcAX8Hy3kiGShBUIVnSkQAaQnG-2fjE-dWTASt8T_bTA0NLFrg9S1lo00H9gbTZGP281s9PSRFxB6-cunHw47FK57joQdoKr0VZEQcva4jX83sPC1m4kFqlNUCpw7fRIRa1jWCeZNh3WXyStVtCkIDxB38a7IQEg7Cn5AWk_pxlpwyl0lbAhutUWGql2N33eIPo4XCNx4UbCk402EXdxAgFKzZHjoH6i010LIPDTdUK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-12">
+<p class="text-white font-label-md tracking-[0.2em] uppercase">Iconic Landmarks</p>
+</div>
+</div>
+<div class="md:col-span-2 relative overflow-hidden group">
+<img class="w-full h-full object-cover sepia-filter group-hover:scale-105 transition-transform duration-1000" data-alt="A clean, minimalist architect's studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBranBM52_6cpqk5wB5qgOyB0jPaq-8UdVsP5ns78vn7v0V1MncIsZ2BNoztier7Wx5dBavfEzcyEKo7kHqs78ZWsIpGEGAzBso2LyZdg_DHyVszPagrK083lx3203GDzfW_JzkfJmcRf3FKfdoh-gpEWG6N6veC3zyg0H4W69eS7GznIhegI6wWkCBTqarAq-AcXNNpm6pt4NSJvMiAL7lR2nMUKBgWEqWgVUSZaErOpZ1K38P7msKfMY24WqYcl4n2JDufJSapSh1"/>
+</div>
+<div class="md:col-span-1 relative overflow-hidden group">
+<img class="w-full h-full object-cover sepia-filter group-hover:scale-105 transition-transform duration-1000" data-alt="Close up of high-quality architectural materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA53NZKNYnWoq91F8XrcOguA2ptASrXNFYs7dKCWySdxpIJbfcZLnXLZnmcuPCiedb4shpePfl92hF3ZMb5W4i8LaAGHz1aS4Yn5848dKFBb4CpQN9Kr44n9qNGuqmrY0klT_mdSJikA8NoSw05O9e0hGWftn2FtERIlWt8VESBtblvMleiJwJXuPTl3TvKwSnxH0ZSksgqCHKVcmA4vgpprQMsOUszsd69ZegMdyt6TEFiFoiUoial-fGYBBqoVJeihqOIXCFUBwt1"/>
+</div>
+<div class="md:col-span-1 relative overflow-hidden group">
+<img class="w-full h-full object-cover sepia-filter group-hover:scale-105 transition-transform duration-1000" data-alt="An abstract view of a geometric staircase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYwIqBr3g-UMEOXeQwzWcVKZSOHLa3uT_vm5zhJist2af2SB4pg3PVmdSRDxFWVSG4tcV65ScbXS4kGA5mVeLBHBBsxmEF0AdkKGS9VdgSoP5fAitalxEHLgC3rjs0EOOgG6WyFZUcNqiQY3yL9hFGtz-JQx58jhbXa5ed54nPPi8EBlBanyjJd6bklBDpqr5Y8cKmF2tdDMvfFeIae-H96l7huUiyXD4dMsL3-E7fLqYA2WfbarvzKASvM2PvWd-TA5gX6L6JQudE"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-32 max-w-max-width mx-auto">
+<div class="flex flex-col gap-10">
+<span class="font-headline-md text-headline-md text-primary">HEIGHT</span>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Engineering excellence in architectural facades and structural consulting since 2008.</p>
+</div>
+<div class="flex flex-col gap-6">
+<p class="font-label-md text-primary uppercase tracking-widest mb-4">Locations</p>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Jaipur Office</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Delhi Office</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Mumbai Office</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Bangalore Office</a>
+</div>
+<div class="flex flex-col gap-6">
+<p class="font-label-md text-primary uppercase tracking-widest mb-4">Expertise</p>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Facade Engineering</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Structural Glazing</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Consultation</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Project Audit</a>
+</div>
+<div class="flex flex-col gap-6">
+<p class="font-label-md text-primary uppercase tracking-widest mb-4">Legal</p>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="px-margin-desktop py-12 border-t border-outline-variant/30 text-center">
+<p class="font-body-md text-outline">© 2024 Height Consultant. Architectural Engineering Excellence.</p>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('input, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.previousElementSibling.style.color = '#7a582d';
+            });
+            el.addEventListener('blur', () => {
+                el.previousElementSibling.style.color = '#817569';
+            });
+        });
+
+        // Simple scroll animation for reveal
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'ease-out');
+        });
+
+        // Mobile menu toggle functionality
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn ? (menuBtn.querySelector('.material-symbols-outlined') || menuBtn) : null;
+
+        if (menuBtn && mobileMenu && menuIcon) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = mobileMenu.classList.contains('translate-x-0');
+                if (isOpen) {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    document.body.classList.remove('menu-open');
+                } else {
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    menuIcon.textContent = 'close';
+                    document.body.classList.add('menu-open');
+                }
+            });
+
+            // Close menu when clicking links
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    document.body.classList.remove('menu-open');
+                });
+            });
+        }
+    </script>
+</body></html>
