@@ -124,12 +124,18 @@
         body {
           min-height: 100dvh;
         }
+@media (max-width: 767px) {
+    .px-margin-desktop {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-500">
-  <nav class="flex justify-between items-center px-margin-desktop py-8 max-w-max-width mx-auto">
+  <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 max-w-max-width mx-auto">
     <div class="flex items-center gap-4">
       <span class="material-symbols-outlined text-primary text-3xl">architecture</span>
       <span class="font-headline-md text-headline-md tracking-widest text-on-surface uppercase">HEIGHT</span>
