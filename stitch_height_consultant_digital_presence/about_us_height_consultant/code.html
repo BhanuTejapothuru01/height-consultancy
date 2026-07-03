@@ -131,7 +131,7 @@
     box-sizing: border-box;
 }
 #mobile-menu.translate-x-full {
-    transform: translateX(100%);
+    transform: translateX(-100%);
 }
 #mobile-menu.translate-x-0 {
     transform: translateX(0);
@@ -167,6 +167,13 @@
 }
 body.menu-open {
     overflow: hidden;
+}
+@media (max-width: 767px) {
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
     </style>
 </head>

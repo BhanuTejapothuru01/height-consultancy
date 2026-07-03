@@ -148,6 +148,11 @@
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
     </style>
 </head>
@@ -178,7 +183,7 @@
     </div>
   </nav>
   <!-- Mobile Menu Drawer -->
-  <div id="mobile-drawer" class="hidden fixed inset-0 z-40 bg-surface flex flex-col justify-center items-center gap-8 font-label-md text-label-md uppercase tracking-widest transition-all duration-300">
+  <div id="mobile-drawer" class="fixed inset-0 z-40 bg-surface flex flex-col justify-center items-center gap-8 font-label-md text-label-md uppercase tracking-widest transition-transform duration-300 -translate-x-full">
     <button id="mobile-menu-close-btn" class="absolute top-8 right-8 text-primary p-2">
       <span class="material-symbols-outlined text-3xl">close</span>
     </button>
@@ -437,21 +442,24 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            mobileDrawer.classList.remove('hidden');
+            mobileDrawer.classList.remove('-translate-x-full');
+            mobileDrawer.classList.add('translate-x-0');
         });
     }
     if (mobileMenuCloseBtn && mobileDrawer) {
         mobileMenuCloseBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            mobileDrawer.classList.add('hidden');
+            mobileDrawer.classList.remove('translate-x-0');
+            mobileDrawer.classList.add('-translate-x-full');
         });
     }
     // Close mobile drawer on link clicks
     if (mobileDrawer) {
         mobileDrawer.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                mobileDrawer.classList.add('hidden');
+                mobileDrawer.classList.remove('translate-x-0');
+                mobileDrawer.classList.add('-translate-x-full');
             });
         });
     }
