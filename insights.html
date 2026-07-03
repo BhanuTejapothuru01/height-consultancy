@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Monograph | Height Consultants Insights</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#cee5ff",
+                    "primary-fixed": "#ffddb8",
+                    "outline": "#817569",
+                    "on-tertiary-fixed-variant": "#2b4964",
+                    "surface-tint": "#7a582d",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad4",
+                    "on-tertiary-container": "#0c2f48",
+                    "primary-container": "#b58d5d",
+                    "surface-container": "#f0eee8",
+                    "error-container": "#ffdad6",
+                    "secondary": "#645d58",
+                    "inverse-on-surface": "#f3f0ea",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#ebbf8b",
+                    "primary": "#7a582d",
+                    "secondary-container": "#e8ded7",
+                    "primary-fixed-dim": "#ebbf8b",
+                    "surface-variant": "#e5e2dc",
+                    "on-primary-container": "#422701",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f6f3ed",
+                    "on-secondary-fixed-variant": "#4c4641",
+                    "on-background": "#1c1c18",
+                    "on-surface": "#1c1c18",
+                    "on-secondary-fixed": "#1f1b17",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e5e2dc",
+                    "on-surface-variant": "#4f453b",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#5f4118",
+                    "inverse-surface": "#31312d",
+                    "on-tertiary-fixed": "#001d32",
+                    "tertiary-container": "#7997b5",
+                    "secondary-fixed-dim": "#cec5be",
+                    "tertiary-fixed-dim": "#abcaea",
+                    "tertiary": "#43617d",
+                    "surface": "#fcf9f3",
+                    "background": "#fcf9f3",
+                    "surface-container-high": "#ebe8e2",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#d3c4b6",
+                    "on-secondary-container": "#68615c",
+                    "surface-bright": "#fcf9f3",
+                    "secondary-fixed": "#ebe1da",
+                    "on-primary-fixed": "#2a1700"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "max-width": "1440px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["EB Garamond"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["EB Garamond"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                    "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f3;
+            color: #1c1c18;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .editorial-rule {
+            height: 1px;
+            background-color: #d3c4b6;
+            width: 100%;
+        }
+
+        .hover-lift {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="grain-overlay"></div>
+<!-- Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-500">
+  <nav class="flex justify-between items-center px-margin-desktop py-8 max-w-max-width mx-auto">
+    <div class="flex items-center gap-4">
+      <span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+      <span class="font-headline-md text-headline-md tracking-widest text-on-surface uppercase">HEIGHT</span>
+    </div>
+    <div class="hidden md:flex items-center gap-12 font-label-md text-label-md uppercase tracking-widest">
+      <a id="nav-home" class="text-secondary hover:text-primary transition-colors" href="index.html">Home</a>
+      <a id="nav-about" class="text-secondary hover:text-primary transition-colors" href="about.html">About</a>
+      <a id="nav-services" class="text-secondary hover:text-primary transition-colors" href="services.html">Services</a>
+      <a id="nav-projects" class="text-secondary hover:text-primary transition-colors" href="projects.html">Projects</a>
+      <a id="nav-insights" class="text-primary border-b border-primary pb-1 transition-colors" href="insights.html">Insights</a>
+      <a id="nav-contact" class="text-secondary hover:text-primary transition-colors" href="contact.html">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:inline-block bg-primary text-on-primary px-8 py-3 font-label-md tracking-widest hover:bg-primary/90 transition-all duration-300 active:opacity-80 text-center">
+        CONSULT
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden text-primary p-2 focus:outline-none">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-drawer" class="hidden fixed inset-0 z-40 bg-surface flex flex-col justify-center items-center gap-8 font-label-md text-label-md uppercase tracking-widest transition-all duration-300">
+    <button id="mobile-menu-close-btn" class="absolute top-8 right-8 text-primary p-2">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <a id="mob-nav-home" class="text-secondary hover:text-primary text-xl transition-colors" href="index.html">Home</a>
+    <a id="mob-nav-about" class="text-secondary hover:text-primary text-xl transition-colors" href="about.html">About</a>
+    <a id="mob-nav-services" class="text-secondary hover:text-primary text-xl transition-colors" href="services.html">Services</a>
+    <a id="mob-nav-projects" class="text-secondary hover:text-primary text-xl transition-colors" href="projects.html">Projects</a>
+    <a id="mob-nav-insights" class="text-secondary hover:text-primary text-xl transition-colors" href="insights.html">Insights</a>
+    <a id="mob-nav-contact" class="text-secondary hover:text-primary text-xl transition-colors" href="contact.html">Contact</a>
+    <a href="contact.html" class="bg-primary text-on-primary px-8 py-3 font-label-md tracking-widest hover:bg-primary/90 transition-all duration-300 active:opacity-80 mt-4 text-center">
+      CONSULT
+    </a>
+  </div>
+</header>
+<main class="pt-24">
+<!-- Hero Section: The Monograph -->
+<section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-margin-desktop py-48 border-b border-outline-variant/30">
+<div class="relative z-10 animate-fade-in max-w-5xl mx-auto">
+<span class="font-label-md text-label-md uppercase tracking-[0.5em] text-primary mb-10 block">Volume IV · Issue I</span>
+<h1 class="font-display-lg text-display-lg mb-10 text-on-background">The Monograph</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant italic max-w-3xl mx-auto leading-relaxed">
+                    Facade Contracting Insights &amp; Technical Guidance for the Architectural Vanguard.
+                </p>
+<div class="mt-20 flex justify-center items-center gap-6">
+<div class="editorial-rule w-24"></div>
+<span class="font-body-md text-body-md text-outline tracking-widest">Est. 1998</span>
+<div class="editorial-rule w-24"></div>
+</div>
+</div>
+</section>
+<!-- Technical Intro -->
+<section class="py-40 px-margin-desktop max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+<div class="md:col-span-4 border-r border-outline-variant/30 pr-16 hidden md:block">
+<h3 class="font-label-md text-label-md uppercase tracking-[0.3em] text-primary mb-10">Specializations</h3>
+<ul class="space-y-6">
+<li class="font-body-lg text-body-lg border-b border-outline-variant/20 pb-6">Curtain Walls</li>
+<li class="font-body-lg text-body-lg border-b border-outline-variant/20 pb-6">Cladding Systems</li>
+<li class="font-body-lg text-body-lg border-b border-outline-variant/20 pb-6">Advanced Waterproofing</li>
+<li class="font-body-lg text-body-lg border-b border-outline-variant/20 pb-6">Precision Installation</li>
+</ul>
+</div>
+<div class="md:col-span-8">
+<p class="font-headline-md text-headline-md leading-[1.6] text-on-surface mb-16">
+                    In an era where structural integrity meets aesthetic transcendence, the facade remains the most critical interface of architectural expression. Our technical guidance bridges the gap between visionary design and tangible durability.
+                </p>
+<button class="group flex items-center gap-6 text-primary font-label-md text-label-md uppercase tracking-[0.3em]">
+                    Explore Technical Archive
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-3" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Featured Article: Commercial Facade Design Trends 2026 -->
+<section class="px-margin-desktop py-20 max-w-max-width mx-auto">
+<div class="relative w-full aspect-[21/10] overflow-hidden group cursor-pointer border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1500ms] group-hover:scale-105" data-alt="A sprawling cinematic view of a futuristic commercial building with a sophisticated glass and metal facade at dusk." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwvoCIbGGMwpetWeVt6zses0-nK8Li_F4w2oyPiYk8PYXNxLXVT48odnCfZ2FJKMgZPQFM9pLnEyftb7yuDcj2TvzTVURdHwADnv5xddbQo0wyoRyxNttpFa2D3hbdygl0Ncus8gM5EFvjQQdy5nO0WJ_2_QU_XHYWS07AQGkZ1VQztJh-tTGDw6rtYuXr8rU6n3GY3sABah1X5u8xcpgq4T0WtxrNDkXZA10uiHgH94uDJM4u9HBoJ2y-GaTDcrqf-2Xa8rSmsGB2')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-16 text-white">
+<span class="font-label-md text-label-md uppercase tracking-[0.4em] mb-6 block">Cover Story</span>
+<h2 class="font-display-lg text-[56px] leading-[1.1] mb-8 max-w-3xl">Commercial Facade Design Trends 2026: The Rise of Kinetic Skin</h2>
+<p class="font-body-lg text-body-lg opacity-90 max-w-2xl">Investigating the transition from static envelopes to intelligent, responsive architectural membranes in commercial hubs.</p>
+</div>
+</div>
+</section>
+<!-- Article Grid -->
+<section class="py-40 px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-32 gap-x-12">
+<!-- Card 1: Smart Facade Design for Schools -->
+<article class="hover-lift flex flex-col gap-8 group">
+<div class="aspect-[4/3] overflow-hidden border border-outline-variant bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1000ms]" data-alt="Modern educational architecture featuring a smart facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApm3k95AAVqwRA_iDl8W8sjkZl2KuQqYd1LYLBW3xvUSoNr0FuONTgIlkYXGAq0Uyb-EswtJsVjViJO4WMlP03YKjosgO6Gn7WlEn9eAwDGYq-I5-KrABlHhEBlt6NVYp2ZO3fe6zIRvPfJoN1NY2gKckl3NLfTBfjT2kmPiqeSxO2jaj3pbWGfMFeCjpWE2Fpe62wncGDX0Zmn7jQkFYCRNpuWvZ9lMcwHpubTuJu_E5jd7FzvcTAMCmY-nxOyWVrjja0Xw88mpUG"/>
+</div>
+<div class="flex flex-col gap-5">
+<span class="font-label-md text-label-md uppercase tracking-[0.3em] text-primary">Education</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors leading-snug">Smart Facade Design for Schools</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 leading-relaxed">How intelligent envelope design impacts cognitive performance and energy efficiency in modern educational environments.</p>
+</div>
+</article>
+<!-- Card 2: Glass Facade Advantages for High-Rise -->
+<article class="hover-lift flex flex-col gap-8 group">
+<div class="aspect-[4/3] overflow-hidden border border-outline-variant bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1000ms]" data-alt="A breathtaking perspective looking up at glass high-rise buildings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRohBFWgPuvTQJK09E40l7LZDxIBSsvoZ-c9sUOluySMFj6dki6U84RPistTMbT6Z0XA_WGPwzlCSnVwzqt7b1NXOtlR0JGpk9TVO55YKSp6PQHUbhDpKagHHJhby0XfOM9nOBt2bvhq8hpSb1oITUFpa1vJxIKi1QH9xcVahnde3yitKQ-LjEqqX8I3alp-pngIQd-d8bivFUBDHJH92neVnv4xHv__2njRWcMmZwDBJohb1yrBqvKAwL0KVwqn8n_BOz8tskeTEq"/>
+</div>
+<div class="flex flex-col gap-5">
+<span class="font-label-md text-label-md uppercase tracking-[0.3em] text-primary">Engineering</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors leading-snug">Glass Facade Advantages for High-Rise</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 leading-relaxed">Analyzing the structural benefits and thermal performance of advanced curtain wall systems in vertical cities.</p>
+</div>
+</article>
+<!-- Card 3: Future Facade Trends -->
+<article class="hover-lift flex flex-col gap-8 group">
+<div class="aspect-[4/3] overflow-hidden border border-outline-variant bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1000ms]" data-alt="Conceptual architectural rendering of future facades" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH_CEliEVuUDDNL0w5yKQVgKWybR-vr5rHhUZuxEdctkuwLQfb4slj_izEb-7zx2FcoJIZJV9IudkYuYbNgcrD-_2UBBI9DJ9uCiVtlikqXiMojArDRvpRAuSap0DZsECO6-N7LhvRKaHFBmMCp-fN7Iau6u-h0po_95mqskNkldeNupAnBuTJgacMYS29uizbXAW6f7htN_327JtpQQdVRX0FDTGurJVCavpAhZczf2QzzyEIckWVPfuEPqJKdqx-RruwIXFkIyJd"/>
+</div>
+<div class="flex flex-col gap-5">
+<span class="font-label-md text-label-md uppercase tracking-[0.3em] text-primary">Speculative</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors leading-snug">Future Facade Trends: Bio-mimicry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 leading-relaxed">A journey into the laboratory: how living organisms are inspiring the next generation of carbon-sequestering cladding.</p>
+</div>
+</article>
+<!-- Card 4: Premium Residency Design -->
+<article class="hover-lift flex flex-col gap-8 group">
+<div class="aspect-[4/3] overflow-hidden border border-outline-variant bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1000ms]" data-alt="Exterior of an ultra-luxury residential villa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXLpJx05rev8VPN5pBDNAn6n4OX_msEkdUNXfoxyYZQsGSspYoMU4Wer2CYd7RnGVyaiLZ-IVdEiGaYYsWfWgClQse6ihn-BhuNU03T1BUtjC43A6DKHVi0cw7BgFSXp7C8pXzBK5Md-XRe03eVEiqTSV7Us8WRi_GlK8-euNPtVdujgZFwfCN-PR7nNjtgASgzGOaKHzYTu0qy7sTN0LUA55GxAcNiL0cIa52Bs0JbYobC2Yon_i7phzLBjeM7NIhB_zRnkJ-a753"/>
+</div>
+<div class="flex flex-col gap-5">
+<span class="font-label-md text-label-md uppercase tracking-[0.3em] text-primary">Residential</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors leading-snug">Premium Residency Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 leading-relaxed">Balancing privacy and transparency: the evolving requirements of elite residential building envelopes.</p>
+</div>
+</article>
+<!-- Card 5: Luxury Hotel Architecture -->
+<article class="hover-lift flex flex-col gap-8 group">
+<div class="aspect-[4/3] overflow-hidden border border-outline-variant bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1000ms]" data-alt="A grand luxury hotel facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZb1TKcZIknmNS0av3kL68w4Lo-g4WCH6yTeVhEosn1y42zy32Z-glaArm5f4edkX4EEkeyG4J2lSdBdP9_cOqKyhsVa2lQ0ztRrNTlpdRRuKHkZdbvbl_25qxEobLDo_ejRERbU2K2e3PyGiuPMwPaZj2bUtEM5Zu3CpqHRz-yRQIEGpxMfNf70S3AHL7fiXjkn6Iz7gkKGhoxzs6emKYhBKf0VL35H33307XhSRLDXCTNVmYe2ZRErRtSFbNrZXDudeKczndCzL"/>
+</div>
+<div class="flex flex-col gap-5">
+<span class="font-label-md text-label-md uppercase tracking-[0.3em] text-primary">Hospitality</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors leading-snug">Luxury Hotel Architecture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 leading-relaxed">How the facade serves as the primary brand touchpoint for the world's most prestigious hospitality groups.</p>
+</div>
+</article>
+<!-- Card 6: Hospital Facade Excellence -->
+<article class="hover-lift flex flex-col gap-8 group">
+<div class="aspect-[4/3] overflow-hidden border border-outline-variant bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1000ms]" data-alt="Architectural view of a modern hospital wing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArubMfoqHpc3erG73w1l6uglZkFkjqxtSSTm1u85HVDuRlRwfzb5Xx6iFKNU1LTqrogND-Z_ImNORXolLTCP-SxI5cYmiJjh54Dr_fR7fHQP6SkXcNggisNQLtCzsyHJXYJXSdpsp20Bb03ORRGalFqXXVWUulXxz-8-1zGlxtZrZg0kUaHGOSCVXxYpHd8I-oAXSjg28X_iF_zPTQmpY09oiDws6LWNx0FD467RITIZwJPQ8vM8U_nH8YEwQwkNjC9jpt-FPxpNAH"/>
+</div>
+<div class="flex flex-col gap-5">
+<span class="font-label-md text-label-md uppercase tracking-[0.3em] text-primary">Healthcare</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors leading-snug">Hospital Facade Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 leading-relaxed">The intersection of clinical performance and biophilic design in modern healthcare envelopes.</p>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter / Editorial Subscription -->
+<section class="py-48 bg-surface-container-low border-y border-outline-variant/30">
+<div class="max-w-4xl mx-auto text-center px-margin-mobile">
+<span class="font-label-md text-label-md uppercase tracking-[0.6em] text-primary mb-12 block">Subscription</span>
+<h2 class="font-display-lg text-display-lg mb-12">Receive the Printed Edition</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-16 leading-loose">
+                    Twice a year, we compile our most rigorous technical findings into a limited-run monograph. Join our global registry of architects and engineers.
+                </p>
+<form class="flex flex-col md:flex-row gap-0 border-b border-on-surface/20 pb-4 items-end max-w-2xl mx-auto">
+<input class="bg-transparent border-none focus:ring-0 w-full font-body-lg text-body-lg py-6 px-0 placeholder:text-outline/50" placeholder="Email Address" type="email"/>
+<button class="font-label-md text-label-md uppercase tracking-[0.3em] text-primary py-6 px-10 whitespace-nowrap hover:opacity-70 transition-opacity">Request Invitation</button>
+</form>
+</div>
+</section>
+<!-- Secondary List Section -->
+<section class="py-40 px-margin-desktop max-w-max-width mx-auto">
+<div class="flex justify-between items-end mb-24 border-b border-outline-variant/30 pb-12">
+<h2 class="font-headline-lg text-headline-lg">Further Reading</h2>
+<a class="font-label-md text-label-md uppercase tracking-[0.4em] text-primary border-b border-primary pb-2" href="#">Archive</a>
+</div>
+<div class="space-y-0">
+<div class="group py-12 border-b border-outline-variant/20 grid grid-cols-1 md:grid-cols-12 items-center cursor-pointer transition-all hover:bg-surface-container/50 px-8">
+<span class="md:col-span-1 font-body-md text-body-md text-outline">07</span>
+<h4 class="md:col-span-7 font-headline-md text-headline-md group-hover:translate-x-6 transition-transform">AI in Facade Design: The Generative Frontier</h4>
+<span class="md:col-span-2 font-label-md text-label-md uppercase tracking-[0.2em] text-on-surface-variant">Technology</span>
+<span class="md:col-span-2 text-right hidden md:block">
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-3xl" data-icon="north_east">north_east</span>
+</span>
+</div>
+<div class="group py-12 border-b border-outline-variant/20 grid grid-cols-1 md:grid-cols-12 items-center cursor-pointer transition-all hover:bg-surface-container/50 px-8">
+<span class="md:col-span-1 font-body-md text-body-md text-outline">08</span>
+<h4 class="md:col-span-7 font-headline-md text-headline-md group-hover:translate-x-6 transition-transform">Navigating Post-COVID Commercial Re-cladding</h4>
+<span class="md:col-span-2 font-label-md text-label-md uppercase tracking-[0.2em] text-on-surface-variant">Logistics</span>
+<span class="md:col-span-2 text-right hidden md:block">
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-3xl" data-icon="north_east">north_east</span>
+</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter px-margin-desktop py-24 max-w-max-width mx-auto">
+    <div class="space-y-8">
+      <div class="flex items-center gap-4">
+        <span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+        <span class="font-headline-md text-headline-md tracking-widest text-on-surface uppercase">HEIGHT</span>
+      </div>
+      <p class="font-body-md text-on-surface-variant max-w-xs uppercase text-xs tracking-widest leading-loose">
+        Global Architectural Consultancy specializing in structural integrity, vertical luxury, and sustainable engineering for the world's most iconic skylines.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest">Studios</h4>
+        <ul class="space-y-4 font-label-md text-[12px] text-on-secondary-fixed-variant tracking-widest list-none uppercase font-semibold">
+          <li><a class="hover:text-primary transition-colors" href="#">London Studio</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Milan Studio</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">New York Studio</a></li>
+        </ul>
+      </div>
+      <div class="space-y-6">
+        <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest">Connect</h4>
+        <ul class="space-y-4 font-label-md text-[12px] text-on-secondary-fixed-variant tracking-widest list-none uppercase font-semibold">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-primary transition-colors" href="projects.html">Projects</a></li>
+          <li><a class="hover:text-primary transition-colors" href="insights.html">Insights</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="space-y-8">
+      <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest">Intellectual Journal</h4>
+      <div class="relative">
+        <input class="w-full bg-transparent border-b border-outline py-4 font-label-md text-[12px] uppercase focus:border-primary outline-none transition-colors" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+        <button class="absolute right-0 bottom-4 font-label-md text-primary uppercase tracking-widest text-xs">Join</button>
+      </div>
+    </div>
+  </div>
+  <div class="px-margin-desktop py-12 border-t border-outline-variant/30 text-center max-w-max-width mx-auto">
+    <p class="font-label-md text-[10px] text-on-secondary-fixed-variant uppercase tracking-[0.3em]">
+      © 2026 HEIGHT ARCHITECTURAL CONSULTANCY. ALL RIGHTS RESERVED.
+    </p>
+  </div>
+</footer>
+<!-- Scroll Progress Indicator -->
+<div class="fixed top-24 left-0 h-1 bg-primary z-[60] transition-all duration-300" id="scroll-progress" style="width: 0%"></div>
+<script>
+        // Scroll Progress Logic
+        window.addEventListener('scroll', () => {
+            const h = document.documentElement, 
+                  b = document.body,
+                  st = 'scrollTop',
+                  sh = 'scrollHeight';
+            const percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+            document.getElementById('scroll-progress').style.width = percent + '%';
+        });
+
+        // Intersection Observer for animation triggers
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('article, section > div').forEach(el => observer.observe(el));
+    </script>
+
+<script>
+// Mobile menu toggle logic
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuCloseBtn = document.getElementById('mobile-menu-close-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+
+    if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileDrawer.classList.remove('hidden');
+        });
+    }
+    if (mobileMenuCloseBtn && mobileDrawer) {
+        mobileMenuCloseBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileDrawer.classList.add('hidden');
+        });
+    }
+    // Close mobile drawer on link clicks
+    if (mobileDrawer) {
+        mobileDrawer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.add('hidden');
+            });
+        });
+    }
+});
+</script>
+</body></html>
